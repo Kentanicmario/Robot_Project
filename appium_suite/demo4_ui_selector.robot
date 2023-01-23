@@ -21,7 +21,7 @@ TC1
     Click Element   android=UiSelector().textContains("Sign up with email")
     Wait Until Page Contains Element    android=UiSelector().textContains("First name")     30s
     Click Element   android=UiSelector().textContains("First name")
-    Input Text    android=UiSelector().textContains("First name")    ken
+    Input Text    android=UiSelector().textContains("First name")    kentanic
     Wait Until Page Contains Element    android=UiSelector().textContains("Birthday")     30s
     Click Element   android=UiSelector().textContains("Birthday")
     Wait Until Page Contains Element    android=UiSelector().resourceId("android:id/numberpicker_input")
