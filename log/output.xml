@@ -1,193 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.4 on win32)" generated="20230124 15:56:37.997" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo5 Ios Nativeapp" source="C:\Users\40032114\robot_project\appium_suite\demo5_ios_nativeapp.robot">
-<test id="s1-t1" name="TC1" line="5">
-<kw name="Create Dictionary" library="BuiltIn">
-<var>&amp;{dic}</var>
-<arg>buildName=khan</arg>
-<arg>projectName=khan project</arg>
-<arg>userName=kentanicleon_A5hO8u</arg>
-<arg>accessKey=2wJGDSeGL1pkpkjipB9i</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230124 15:56:38.588" level="INFO">&amp;{dic} = { buildName=khan | projectName=khan project | userName=kentanicleon_A5hO8u | accessKey=2wJGDSeGL1pkpkjipB9i }</msg>
-<status status="PASS" starttime="20230124 15:56:38.587" endtime="20230124 15:56:38.591"/>
+<robot generator="Robot 6.0.2 (Python 3.10.4 on win32)" generated="20230124 17:06:45.903" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo1" source="C:\Users\40032114\robot_project\selinium_suit\demo1.robot">
+<test id="s1-t1" name="TC5" line="29">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230124 17:06:46.221" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230124 17:06:46.221" endtime="20230124 17:06:48.114"/>
 </kw>
-<kw name="Open Application" library="AppiumLibrary">
-<arg>remote_url=http://hub.browserstack.com/wd/hub</arg>
-<arg>platformName=ios</arg>
-<arg>deviceName=iPhone 11 Pro</arg>
-<arg>app=bs://2688d4fc593722023eef4b07a8d164af137514cf</arg>
-<arg>platformVersion=13</arg>
-<arg>bstack:options=${dic}</arg>
-<doc>Opens a new application to given Appium server.
-Capabilities of appium server, Android and iOS,
-Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
-| *Option*            | *Man.* | *Description*     |
-| remote_url          | Yes    | Appium server url |
-| alias               | no     | alias             |
-| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<kw name="Capture Page Screenshot" library="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20230124 15:56:40.266" level="FAIL">No application is open</msg>
-<status status="FAIL" starttime="20230124 15:56:40.266" endtime="20230124 15:56:40.277"/>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>@{out}</var>
+<arg>Click Element</arg>
+<arg>xpath=//a</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230124 17:06:48.119" level="INFO">Clicking element 'xpath=//a'.</msg>
+<msg timestamp="20230124 17:06:48.323" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-128.png"&gt;&lt;img src="selenium-screenshot-128.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230124 17:06:48.323" level="FAIL">Element with locator 'xpath=//a' not found.</msg>
+<status status="FAIL" starttime="20230124 17:06:48.116" endtime="20230124 17:06:48.327"/>
 </kw>
-<msg timestamp="20230124 15:56:40.277" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
-<msg timestamp="20230124 15:56:40.277" level="FAIL">WebDriverException: Message: App Automate testing time has expired. Contact BrowserStack Support at https://www.browserstack.com/contact for extending your Free Trial.
-</msg>
-<status status="FAIL" starttime="20230124 15:56:38.591" endtime="20230124 15:56:40.283"/>
+<msg timestamp="20230124 17:06:48.327" level="INFO">@{out} = [ FAIL | Element with locator 'xpath=//a' not found. ]</msg>
+<status status="PASS" starttime="20230124 17:06:48.115" endtime="20230124 17:06:48.327"/>
 </kw>
-<kw name="Set Appium Timeout" library="AppiumLibrary">
-<arg>20s</arg>
-<doc>Sets the timeout in seconds used by various keywords.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.284" endtime="20230124 15:56:40.284"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${out}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230124 17:06:48.327" endtime="20230124 17:06:48.327"/>
 </kw>
-<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
-<arg>xpath=//XCUIElementTypeTextField[@name="test-Username"]</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.285" endtime="20230124 15:56:40.285"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${out}[0]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230124 17:06:48.327" endtime="20230124 17:06:48.327"/>
 </kw>
-<kw name="Input Text" library="AppiumLibrary">
-<arg>xpath=//XCUIElementTypeTextField[@name="test-Username"]</arg>
-<arg>standard_user</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.285" endtime="20230124 15:56:40.286"/>
+<kw name="Log" library="BuiltIn">
+<arg>${out}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230124 17:06:48.327" level="INFO">['FAIL', "Element with locator 'xpath=//a' not found."]</msg>
+<status status="PASS" starttime="20230124 17:06:48.327" endtime="20230124 17:06:48.327"/>
 </kw>
-<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
-<arg>xpath=//XCUIElementTypeSecureTextField[@name="test-Password"]</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.286" endtime="20230124 15:56:40.287"/>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<arg>xpath=//XCUIElementTypeSecureTextField[@name="test-Password"]</arg>
-<arg>secret_sauce</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.287" endtime="20230124 15:56:40.287"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>xpath=//XCUIElementTypeOther[@name="test-LOGIN"]</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.287" endtime="20230124 15:56:40.287"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
-<arg>xpath=(//XCUIElementTypeOther[@name="test-ADD TO CART"])</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.287" endtime="20230124 15:56:40.287"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>xpath=(//XCUIElementTypeOther[@name="test-ADD TO CART"])</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.287" endtime="20230124 15:56:40.287"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
-<arg>xpath=(//XCUIElementTypeOther[@name="test-ADD TO CART"])</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.287" endtime="20230124 15:56:40.287"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>xpath=(//XCUIElementTypeOther[@name="test-ADD TO CART"])</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.287" endtime="20230124 15:56:40.287"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>xpath=//XCUIElementTypeOther[@name="test-Cart"]/XCUIElementTypeOther</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.287" endtime="20230124 15:56:40.287"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
-<arg>xpath=//XCUIElementTypeOther[@name="test-CHECKOUT"]</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.287" endtime="20230124 15:56:40.287"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>xpath=//XCUIElementTypeOther[@name="test-CHECKOUT"]</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.287" endtime="20230124 15:56:40.287"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
-<arg>xpath=//XCUIElementTypeTextField[@name="test-First Name"]</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.287" endtime="20230124 15:56:40.287"/>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<arg>xpath=//XCUIElementTypeTextField[@name="test-First Name"]</arg>
-<arg>john</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.287" endtime="20230124 15:56:40.287"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
-<arg>xpath=//XCUIElementTypeTextField[@name="test-Last Name"]</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.287" endtime="20230124 15:56:40.287"/>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<arg>xpath=//XCUIElementTypeTextField[@name="test-Last Name"]</arg>
-<arg>jo</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.287" endtime="20230124 15:56:40.287"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
-<arg>xpath=//XCUIElementTypeTextField[@name="test-Zip/Postal Code"]</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.287" endtime="20230124 15:56:40.287"/>
-</kw>
-<kw name="Input Text" library="AppiumLibrary">
-<arg>xpath=//XCUIElementTypeTextField[@name="test-Zip/Postal Code"]</arg>
-<arg>100022</arg>
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.287" endtime="20230124 15:56:40.292"/>
-</kw>
-<kw name="Hide Keyboard" library="AppiumLibrary">
-<arg>key_name=Done</arg>
-<doc>Hides the software keyboard on the device. (optional) In iOS, use `key_name` to press
-a particular key, ex. `Done`. In Android, no parameters are used.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.292" endtime="20230124 15:56:40.292"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
-<arg>xpath=//XCUIElementTypeOther[@name="test-CONTINUE"]</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.292" endtime="20230124 15:56:40.292"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>xpath=//XCUIElementTypeOther[@name="test-CONTINUE"]</arg>
-<doc>Click element identified by `locator`.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.292" endtime="20230124 15:56:40.292"/>
-</kw>
-<kw name="Element Should Be Visible" library="AppiumLibrary">
-<arg>xpath=//*[contains(@text,'Payment Information')]</arg>
-<doc>Verifies that element identified with locator is visible.</doc>
-<status status="NOT RUN" starttime="20230124 15:56:40.292" endtime="20230124 15:56:40.292"/>
-</kw>
-<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
-<doc>Closes the current application and also close webdriver session.</doc>
-<kw name="Capture Page Screenshot" library="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20230124 15:56:40.292" level="FAIL">No application is open</msg>
-<status status="FAIL" starttime="20230124 15:56:40.292" endtime="20230124 15:56:40.296"/>
-</kw>
-<msg timestamp="20230124 15:56:40.300" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
-<msg timestamp="20230124 15:56:40.300" level="FAIL">No application is open</msg>
-<status status="FAIL" starttime="20230124 15:56:40.292" endtime="20230124 15:56:40.301">No application is open</status>
-</kw>
-<status status="FAIL" starttime="20230124 15:56:38.583" endtime="20230124 15:56:40.302">WebDriverException: Message: App Automate testing time has expired. Contact BrowserStack Support at https://www.browserstack.com/contact for extending your Free Trial.
-
-
-Also teardown failed:
-No application is open</status>
+<status status="PASS" starttime="20230124 17:06:46.221" endtime="20230124 17:06:48.327"/>
 </test>
-<status status="FAIL" starttime="20230124 15:56:38.006" endtime="20230124 15:56:40.304"/>
+<status status="PASS" starttime="20230124 17:06:45.903" endtime="20230124 17:06:48.327"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Demo5 Ios Nativeapp">Demo5 Ios Nativeapp</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo1">Demo1</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230124 15:56:40.277" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
-<msg timestamp="20230124 15:56:40.300" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>

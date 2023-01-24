@@ -25,4 +25,11 @@ TC4
     Input Text    locator=id:input_username    text=hello
     Input Password    input_password    wel123
     Click Element    input_go
+    
+TC5
+    Open Browser    browser=chrome
+    @{out}      Run Keyword And Ignore Error    Click Element       xpath=//a
+    Log To Console    ${out}
+    Log To Console    ${out}[0]
+    Log    ${out}
 

@@ -44,3 +44,6 @@ TC1
 
     [Teardown]      Close Application
 
+TC2 Open APP
+    Open Application    remote_url=
+    
