@@ -6,6 +6,7 @@ ${MOBILE}   9089786756
 @{COLORS}   red    green   yellow
 *** Test Cases ***
 TC1
+    [Documentation]     #working with list and dictionary
     ${my_name}  Set Variable    mario
     Log To Console    ${my_name}
     Log To Console    ${BROWSER_NAME}

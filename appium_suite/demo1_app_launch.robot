@@ -3,6 +3,7 @@ Library     AppiumLibrary
 
 *** Test Cases ***
 TC1
+    [Documentation]     #working with khanacademy
     Open Application    remote_url=http://localhost:4723/wd/hub
     ...     platformName=android
     ...     deviceName=motoonrfusionplus

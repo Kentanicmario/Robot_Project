@@ -7,6 +7,7 @@ ${MOBILE}   9089786756
 *** Test Cases ***
 
 TC1
+    [Documentation]     #accessing dictionary
     @{fruits}   Create List     apple       orange      melon
     Log To Console    ${fruits}
     #

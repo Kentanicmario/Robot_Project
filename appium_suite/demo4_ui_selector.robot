@@ -3,7 +3,7 @@ Library     AppiumLibrary
 
 *** Test Cases ***
 TC1
-    [Documentation]     #working with native app
+    [Documentation]     #working with native app accessing dob
     Open Application    remote_url=http://localhost:4723/wd/hub
     ...     platformName=android
     ...     deviceName=motoonrfusionplus

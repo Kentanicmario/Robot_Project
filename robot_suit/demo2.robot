@@ -2,6 +2,7 @@
 Library   OperatingSystem
 *** Test Cases ***
 TC1
+    [Documentation]     #working with directory
     Create Directory    path=A:\\ken\\demo123
 TC2
     Log To Console    A:\\ken\\demo123

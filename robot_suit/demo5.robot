@@ -5,7 +5,7 @@ Library    String
 *** Test Cases ***
 
 TC1
-
+    [Documentation]     #add and remove string
     @{demo3}    List Files In Directory      C:\\
     #Log To Console    ${demo3}
     Log List    ${demo3}

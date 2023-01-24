@@ -3,6 +3,7 @@ Library  DateTime
 
 *** Test Cases ***
 TC1
+    [Documentation]     #working with calculations
     Log To Console  message=Kentanic Mario
     Log To Console  hello
 TC2

@@ -2,6 +2,7 @@
 Library    SeleniumLibrary
 *** Test Cases ***
 TC1
+    [Documentation]     #working with website
     Open Browser   url=https://www.google.com       browser=chrome
     ${actual_title}    Get Title 
     Log To Console    ${actual_title}

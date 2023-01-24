@@ -3,6 +3,7 @@ Library    SeleniumLibrary
 *** Test Cases ***
 
 TC1 Register
+    [Documentation]     #working with facebook app
     Open Browser    url=https://www.facebook.com   browser=chrome
     Maximize Browser Window
     Set Selenium Implicit Wait    30s
